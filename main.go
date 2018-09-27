@@ -1,16 +1,19 @@
 package main
 
-import "fmt"
-
-var deco int
+import (
+	"fmt"
+)
 
 func main() {
-	//var card string = "Ace of spades"
-	card := "Ace of spades"
-	card = "Five of diamons"
+	cards := []string{"Ace of Diamonds", newCard()}
+	cards = append(cards, "HEYHEY")
 
-	deco = 5
+	for i, card := range cards {
+		fmt.Println(i, card)
+	}
 
-	fmt.Println(deco)
-	fmt.Println(card)
+}
+
+func newCard() string {
+	return "Five of Diamonds"
 }
